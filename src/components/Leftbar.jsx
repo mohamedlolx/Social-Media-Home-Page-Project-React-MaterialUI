@@ -25,7 +25,7 @@ const Leftbar = ({ mode, setMode }) => {
       <Box position="fixed">
         <List>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="">
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
@@ -33,7 +33,7 @@ const Leftbar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#ContactPage">
+            <ListItemButton component="a" href="ContactPage">
               <ListItemIcon>
                 <ContactPage />
               </ListItemIcon>
@@ -41,7 +41,7 @@ const Leftbar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#Groups">
+            <ListItemButton component="a" href="Groups">
               <ListItemIcon>
                 <Groups />
               </ListItemIcon>
@@ -49,7 +49,7 @@ const Leftbar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="Marketplace">
               <ListItemIcon>
                 <Storefront />
               </ListItemIcon>
@@ -57,7 +57,7 @@ const Leftbar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="friends">
               <ListItemIcon>
                 <PeopleAlt />
               </ListItemIcon>
@@ -65,7 +65,7 @@ const Leftbar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="setting">
               <ListItemIcon>
                 <Settings />
               </ListItemIcon>
@@ -73,7 +73,7 @@ const Leftbar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="profile">
               <ListItemIcon>
                 <AssignmentInd />
               </ListItemIcon>
@@ -81,7 +81,7 @@ const Leftbar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="/">
               <ListItemIcon>
                 <DarkMode />
               </ListItemIcon>

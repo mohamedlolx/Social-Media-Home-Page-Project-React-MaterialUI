@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import {
   styled,
   Box,
@@ -38,9 +39,21 @@ const AvtarContainer = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+  const anchorRef = React.useRef();
+  const [anchorEl, setAnchorEl] = React.useState();
+  React.useEffect(() => {
+    setTimeout(() => setAnchorEl(anchorRef?.current), 1);
+  }, [anchorRef]);
+
   const [open, setOpen] = React.useState(false);
+  const handelClose = (e) => {
+    setOpen(false);
+  };
+  const handelOpen = (e) => {
+    setOpen(true);
+  };
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" ref={anchorRef}>
       <StyledNav>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
           ZOZ Is Here
@@ -60,10 +73,10 @@ const Navbar = () => {
             alt="Mohamed Hassan"
             src="https://i.ytimg.com/vi/erZ3IyBCXdY/maxresdefault.jpg"
             sx={{ width: 30, height: 30 }}
-            onClick={(e) => setOpen(true)}
+            onClick={handelOpen}
           />
         </IconContainer>
-        <AvtarContainer onClick={(e) => setOpen(true)}>
+        <AvtarContainer onClick={handelOpen}>
           <Avatar
             alt="Mohamed Hassan"
             src="https://i.ytimg.com/vi/erZ3IyBCXdY/maxresdefault.jpg"
@@ -76,6 +89,7 @@ const Navbar = () => {
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
         open={open}
+        anchorEl={anchorEl}
         onClose={(e) => setOpen(false)}
         anchorOrigin={{
           vertical: "top",
@@ -86,9 +100,17 @@ const Navbar = () => {
           horizontal: "right",
         }}
       >
-        <MenuItem>Profile</MenuItem>
-        <MenuItem>My account</MenuItem>
-        <MenuItem>Logout</MenuItem>
+        <MenuItem onClick={handelClose}>
+          <Link to="/profile" relative="path">
+            Profile
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handelClose}>
+          <Link>My account</Link>
+        </MenuItem>
+        <MenuItem onClick={handelClose}>
+          <Link>Logout</Link>
+        </MenuItem>
       </Menu>
     </AppBar>
   );
