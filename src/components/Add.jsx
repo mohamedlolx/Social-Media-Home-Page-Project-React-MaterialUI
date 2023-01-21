@@ -12,6 +12,7 @@ import {
   ButtonGroup,
 } from "@mui/material";
 import React from "react";
+import imgper from "./123.jpg";
 import {
   Add,
   CalendarMonth,
@@ -69,7 +70,7 @@ const AddSwitch = () => {
           <UserBox>
             <Avatar
               alt="Mohamed Hassan"
-              src="https://i.ytimg.com/vi/erZ3IyBCXdY/maxresdefault.jpg"
+              src={imgper}
               sx={{ width: 30, height: 30 }}
             />
             <Typography variant="div" fontWeight="500">
