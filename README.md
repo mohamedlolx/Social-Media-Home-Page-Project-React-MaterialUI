@@ -16,7 +16,7 @@ We use the following technologies:
 
 Sample of the web application:
 
-![image](https://user-images.githubusercontent.com/97471166/213866914-ffca61fc-9aac-4589-a52c-0d8a8b5877f9.png)
+![image](https://user-images.githubusercontent.com/97471166/213867421-4c88283a-6378-409b-b198-da7a10ab490e.png)
 ![image](https://user-images.githubusercontent.com/97471166/213866922-293aaee5-89f0-438b-81a5-d8383bfe89f0.png)
 ![image](https://user-images.githubusercontent.com/97471166/213867402-9ab27d87-ed98-4562-bf7e-148feb99ed49.png)
 
