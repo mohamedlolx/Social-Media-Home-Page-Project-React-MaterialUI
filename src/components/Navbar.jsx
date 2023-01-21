@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import imgper from "./123.jpg";
 import {
   styled,
   Box,
@@ -10,7 +10,8 @@ import {
   Badge,
   Avatar,
   Menu,
-  MenuItem,
+  ListItemButton,
+  ListItemText,
 } from "@mui/material";
 import { AddReaction, Mail, NotificationImportant } from "@mui/icons-material";
 
@@ -71,7 +72,7 @@ const Navbar = () => {
           </Badge>
           <Avatar
             alt="Mohamed Hassan"
-            src="https://i.ytimg.com/vi/erZ3IyBCXdY/maxresdefault.jpg"
+            src={imgper}
             sx={{ width: 30, height: 30 }}
             onClick={handelOpen}
           />
@@ -79,7 +80,7 @@ const Navbar = () => {
         <AvtarContainer onClick={handelOpen}>
           <Avatar
             alt="Mohamed Hassan"
-            src="https://i.ytimg.com/vi/erZ3IyBCXdY/maxresdefault.jpg"
+            src={imgper}
             sx={{ width: 30, height: 30 }}
           />
           <Typography variant="span">Mohamed</Typography>
@@ -100,17 +101,15 @@ const Navbar = () => {
           horizontal: "right",
         }}
       >
-        <MenuItem onClick={handelClose}>
-          <Link to="/profile" relative="path">
-            Profile
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handelClose}>
-          <Link>My account</Link>
-        </MenuItem>
-        <MenuItem onClick={handelClose}>
-          <Link>Logout</Link>
-        </MenuItem>
+        <ListItemButton onClick={handelClose} component="a" href="/profile">
+          <ListItemText primary="Profile" />
+        </ListItemButton>
+        <ListItemButton onClick={handelClose} component="a" href="#myaccount">
+          <ListItemText primary="My account" />
+        </ListItemButton>
+        <ListItemButton onClick={handelClose} component="a" href="#logout">
+          <ListItemText primary="Logout" />
+        </ListItemButton>
       </Menu>
     </AppBar>
   );
